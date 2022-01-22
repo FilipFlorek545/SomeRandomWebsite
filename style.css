@@ -95,9 +95,12 @@ button:hover:before {
 #contents_2 {
   background-color: white;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #contents_2 h2 {
   margin-left: 3em;
+  margin-bottom: 3em;
 }
 .specialist_1,
 .specialist_2 {
@@ -106,7 +109,7 @@ button:hover:before {
 }
 .specialist_1 p,
 .specialist_2 p {
-  width: 700px;
+  width: 650px;
   margin: auto;
   padding: 30px;
 }
@@ -122,6 +125,11 @@ button:hover:before {
   border-radius: 50%;
   background-color: grey;
   margin-right: 50px;
+}
+.circle_1,
+.circle_2 {
+  margin-left: auto;
+  margin-right: auto;
 }
 #contents_3 {
   background-color: #405d78;
