@@ -2,31 +2,30 @@
   width: 960px;
   height: 100vh;
   margin: auto;
-  margin-top: -10px;
+  margin-top: -8px;
 }
 body {
   font-family: "Roboto", sans-serif;
   background-color: #c9c0bb;
 }
 #top {
-  width: 960px;
-  display: flex;
+  display: grid;
+  grid-template-rows: 80px;
+  grid-template-columns: 400px 250px 310px;
+  align-items: center;
+  justify-items: center;
   color: #ffffff;
   background-color: #333333;
-  padding: 10px 0px;
 }
 #companyName {
-  margin-left: 10vh;
-  margin-top: auto;
-  margin-bottom: auto;
   text-shadow: 1px 1px 2px gray;
   cursor: pointer;
   color: #ffffff;
   text-decoration: none;
 }
 #rightnav {
+  grid-column: -2;
   padding: 25px;
-  margin-left: 40vh;
 }
 .topnav {
   padding: 0px 10px;
@@ -38,11 +37,9 @@ body {
   color: grey;
 }
 #companyName {
-  margin-left: 50px;
   font-size: 20px;
-  padding: 3px;
 }
-#contents_1_background {
+#contents_1 {
   background-image: url(https://i.picsum.photos/id/795/1920/1080.jpg?hmac=WdNixjqDJa970IaHqtaMJeaIBXMm5Bh4CfpJMVLYeAs);
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,12 +47,11 @@ body {
   padding-left: 50px;
   color: white;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #contents_1 h2 h4 {
   text-shadow: 1px 1px 2px gray;
-}
-#contents_1 {
-  margin-top: 75px;
 }
 button {
   position: relative;
@@ -93,30 +89,24 @@ button:hover:before {
   right: 0;
 }
 #contents_2 {
+  display: grid;
+  grid-template-rows: 100px 150px 150px;
+  grid-template-columns: repeat(3, 300px);
   background-color: white;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 30px;
+  justify-items: center;
+  justify-content: center;
 }
 #contents_2 h2 {
-  margin-left: 3em;
-  margin-bottom: 3em;
+  text-shadow: 1px 1px 2px gray;
 }
-.specialist_1,
-.specialist_2 {
-  display: flex;
-  margin: auto;
+.spec_1 {
+  grid-row: 2;
+  grid-column: 2/4;
 }
-.specialist_1 p,
-.specialist_2 p {
-  width: 650px;
-  margin: auto;
-  padding: 30px;
-}
-.specialist_2 b {
-  float: right;
-}
-.specialist_2 p {
+.spec_2 {
+  grid-row: 3;
+  grid-column: -4 / -2;
   text-align: right;
 }
 .circle {
@@ -124,12 +114,14 @@ button:hover:before {
   width: 150px;
   border-radius: 50%;
   background-color: grey;
-  margin-right: 50px;
 }
-.circle_1,
+.circle_1 {
+  grid-row: 2;
+  grid-column: 1;
+}
 .circle_2 {
-  margin-left: auto;
-  margin-right: auto;
+  grid-row: 3;
+  grid-column: 3;
 }
 #contents_3 {
   background-color: #405d78;
@@ -137,12 +129,18 @@ button:hover:before {
   padding: 40px;
 }
 #contents_3 h2 {
+  margin-bottom: 40px;
+  height: auto;
   text-shadow: 1px 1px 2px gray;
 }
 #serviceBox {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 150px);
   justify-content: center;
+  column-gap: 75px;
+  row-gap: 50px;
+  padding: 10px;
 }
 .service {
   border: 3px solid gainsboro;
@@ -150,21 +148,20 @@ button:hover:before {
   background-color: white;
   height: 150px;
   width: 150px;
-  margin: 3em;
   justify-content: center;
   align-items: center;
-  display: inline-flex;
+  display: flex;
   text-decoration: none;
   color: #405d78;
 }
 .service:hover {
   background-color: gainsboro;
+  border-color: white;
 }
 #footer {
   display: flex;
   color: white;
   background-color: #333333;
-  flex-direction: row;
   width: 960px;
 }
 #footer p {
